@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Grocery Store</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f2f2f2;
+      text-align: center;
+    }
+
+    h1 {
+      background: green;
+      color: white;
+      padding: 15px;
+    }
+
+    .product {
+      background: white;
+      margin: 10px auto;
+      padding: 10px;
+      width: 300px;
+      border-radius: 5px;
+    }
+
+    button {
+      background: orange;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+
+/* MOBILE FRIENDLY CODE */
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 22px;
+    padding: 10px;
+  }
+
+  .product {
+    width: 90%;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+  </style>
+
+  <script>
+function order(item) {
+  window.open(
+    "https://wa.me/9758735863?text=I%20want%20to%20order%20" 
+    + item,
+    "_blank"
+  );
+}
+</script>
+
+</head>
+
+<body>
+
+<h1>Rohit Grocery Store</h1>
+
+<div class="product">
+  <h3>Basmati Rice - ₹80/kg</h3>
+  <button onclick="order('Basmati Rice')">Order</button>
+</div>
+
+
+<div class="product">
+  <h3>Wheat Atta - ₹45/kg</h3>
+  <button onclick="order('Wheat Atta')">Order</button>
+</div>
+
+<div class="product">
+  <h3>Cooking Oil - ₹140/L</h3>
+  <button onclick="order('Cooking Oil')">Order</button>
+</div>
+
+<div class="product">
+  <h3>Biscuits - ₹30</h3>
+  <button onclick="order('Biscuits')">Order</button>
+</div>
+
+<p>Payment: UPI on Delivery</p>
+
+</body>
+</html>
